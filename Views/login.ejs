@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa; /* Light floating sky blue color for the entire background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #000;
+        }
+
+        .main-container {
+            width: 70%; /* Increased width of the main container */
+            height: auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.0); /* Transparent background */
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between; /* Adjusts layout with space between logo and form */
+            align-items: center;
+        }
+
+        .login-form {
+            width: 60%; /* Adjusted width of the login form */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .login-form h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #6a11cb;
+            border-radius: 3px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="password"]:focus {
+            border-bottom: 2px solid #2575fc;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #add8e6; /* Light blue color */
+            color: #fff;
+            border: none;
+            border-radius: 25px; /* Rounded corners */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .form-group button:hover {
+            background-color: #87cefa; /* Slightly darker blue on hover */
+            transform: translateY(-2px);
+        }
+
+        .container.signin {
+            margin-top: 20px;
+        }
+
+        .container.signin p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .container.signin a {
+            color: #2575fc;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: bold;
+        }
+
+        .container.signin a:hover {
+            color: #1e4c8a;
+        }
+
+        .logo-container {
+            width: 40%;
+            display: flex;
+            flex-direction: column; /* Align logo and text vertically */
+            justify-content: center; /* Center align */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center-align text */
+        }
+
+        .logo-container img {
+            width: 180px; /* Increased size of the logo */
+            height: auto;
+        }
+
+        .logo-text {
+            font-size: 20px; /* Font size for the text */
+            color: black; /* Black color */
+            font-weight: bold; /* Bold text */
+            margin-top: 10px; /* Space between logo and text */
+            letter-spacing: 1px; /* Spacing between letters for a modern feel */
+            text-transform: uppercase; /* Uppercase text */
+            font-family: 'Arial', sans-serif; /* Font family */
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left side: Login form -->
+        <div class="login-form">
+            <h1>Login</h1>
+            <form action="/login/user" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input style="width: 160%;" type="text" id="username" name="username" placeholder="Enter your username or email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input style="width: 160%;" type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button  type="submit">Login</button>
+            </form>
+            <div class="container signin">
+                <p style="font-style:italic; color: #333; font-weight: bold;">Don't have an account?</p>
+                <a href="/signup">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- Right side: Logo -->
+        <div class="logo-container">
+            <img src="https://res.cloudinary.com/drnasr3fr/image/upload/v1728198414/logo-removebg-preview_rsjf55.png" alt="Book Logo">
+            <div class="logo-text">Let's Open The Book</div> <!-- New text below logo -->
+        </div>
+    </div>
+</body>
+</html>
